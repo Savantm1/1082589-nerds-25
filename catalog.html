@@ -36,7 +36,7 @@
       <h1 class="title">Магазин готовых шаблонов</h1>
       <aside class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <form class="filter" action="#" method="post">
+        <form class="filter" action="#" method="get">
           <fieldset class="grid">
             <legend>Сетка:</legend>
             <label>
@@ -59,7 +59,7 @@
               Слайдер
             </label>
             <label>
-              <input type="checkbox" name="block_of_feautures">
+              <input type="checkbox" name="block-of-feautures">
               Блок преимуществ
             </label>
             <label>
@@ -155,13 +155,13 @@
       </section>
       <ul class="social">
         <li>
-          <a class="social-button" href="#" aria-label="Мы вконтакте" ></a>
+          <a class="social-button" href="#" > Мы вконтакте</a>
         </li>
         <li>
-          <a class="social-button" href="#" aria-label="Мы в фейсбуке" ></a>
+          <a class="social-button" href="#" > Мы в фейсбуке</a>
         </li>
         <li>
-          <a class="social-button" href="#"aria-label="Мы в инстаграм" ></a>
+          <a class="social-button" href="#" >Мы в инстаграмм</a>
         </li>
       </ul>
       <div class="offer">
@@ -169,28 +169,22 @@
         <p>Cкидка 10% для друзей из социальных сетей.</p>
       </div>
     </footer>
-    <div class="write_us">
+    <div class="write-us">
       <h2>Напишите нам</h2>
-      <button type="button" name="close" aria-label="Закрыть окно"></button>
-      <form action="#" method="post">
+      <button type="button" name="close" >Закрыть окно</button>
+      <form action="#" method="get">
         <label>
           Ваше имя
-          </br>
-          <input type="text" name="person_name" placeholder="Имя Фамилия">
-          </br>
+          <input type="text" name="person-name" placeholder="Имя Фамилия">
         </label>
         <label>
           Ваш e-mail:
-          </br>
-          <input type="mail" name="mail_adress" placeholder="email@example.com">
-          </br>
+          <input type="mail" name="mail-adress" placeholder="email@example.com">
         </label>
         <label>
           Текст письма:
-          </br>
-          <textarea rows="5" name="mail_text" placeholder="В свободной форме">
+          <textarea rows="5" name="mail-text" placeholder="В свободной форме">
           </textarea>
-          </br>
         </label>
         <button type="submit" name="submit">Отправить</button>
       </form>
