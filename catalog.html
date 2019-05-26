@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -38,7 +41,7 @@
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form class="filter" action="#" method="get">
           <fieldset class="grid">
-            <legend>Сетка:</legend>
+            <legend class="block-title">Сетка:</legend>
             <label>
               <input type="radio" name="grid" value="adaptive" checked>
               Адаптивная
@@ -53,7 +56,7 @@
             </label>
           </fieldset>
           <fieldset class="features">
-            <legend>Особенности:</legend>
+            <legend class="block-title">Особенности:</legend>
             <label>
               <input type="checkbox" name="slider" checked>
               Слайдер
@@ -75,7 +78,7 @@
               Корзина
             </label>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="show" type="submit">Показать</button>
         </form>
       </aside>
       <section class="catalog">
@@ -87,9 +90,9 @@
             </span>
             <img src="img/img-sedona.png" width="360" height="576" alt="Sedona">
             <div class="window-hidden">
-              <a href="#">Sedona</a>
+              <a class="block-title" href="#">Sedona</a>
               <p>Информативный сайт для туристов</p>
-              <a class="price" href="#">9900 РУБ.</a>
+              <a class="price" href="#">9900 руб.</a>
             </div>
           </li>
           <li class="content-item">
@@ -98,9 +101,9 @@
             </span>
             <img src="img/img-pink.png" width="360" height="576" alt="Pink">
             <div class="window-hidden">
-              <a href="#">Pink app</a>
+              <a class="block-title" href="#">Pink app</a>
               <p>Продуктовый лендинг приложения для iOS и Androind</p>
-              <a class="price" href="#">9900 РУБ.</a>
+              <a class="price" href="#">9900 руб.</a>
             </div>
           </li>
           <li class="content-item">
@@ -109,9 +112,9 @@
             </span>
             <img src="img/img-barbershop.png" width="360" height="576" alt="Borodinski">
             <div class="window-hidden">
-              <a href="#">Barbershop</a>
+              <a class="block-title" href="#">Barbershop</a>
               <p>Сайт салона красоты.Для мужчин, да.</p>
-              <a class="price" href="#">9900 РУБ.</a>
+              <a class="price" href="#">9900 руб.</a>
             </div>
           </li>
           <li class="content-item">
@@ -120,7 +123,7 @@
             </span>
             <img src="img/img-mishka.png" width="360" height="576" alt="Mishka">
             <div class="window-hidden">
-              <a href="#">Mishka</a>
+              <a class="block-title" href="#">Mishka</a>
               <p>Интернет-магазин вязаных игрушек</p>
               <a class="price" href="#">9900 РУБ.</a>
             </div>
@@ -131,9 +134,9 @@
             </span>
             <img src="img/img-aplus.png" width="360" height="576" alt="A plus">
             <div class="window-hidden">
-              <a href="#">A plus</a>
+              <a class="block-title" href="#">A plus</a>
               <p>Лендинг курсов повышения квалификации</p>
-              <a class="price" href="#">9900 РУБ.</a>
+              <a class="price" href="#">9900 руб.</a>
             </div>
           </li>
           <li class="content-item">
@@ -142,9 +145,9 @@
             </span>
             <img src="img/img-kvast.jpg" width="360" height="576" alt="Kvast">
             <div class="window-hidden">
-              <a href="#">КВАСТ</a>
+              <a class="block-title" href="#">КВАСТ</a>
               <p>Промо-сайт производителя крафтового кваса</p>
-              <a class="price" href="#">9900 РУБ.</a>
+              <a class="price" href="#">9900 руб.</a>
             </div>
           </li>
         </ul>
@@ -172,7 +175,7 @@
     <div class="write-us">
       <h2>Напишите нам</h2>
       <button type="button" name="close" >Закрыть окно</button>
-      <form action="#" method="get">
+      <form action="#" method="post">
         <label>
           Ваше имя
           <input type="text" name="person-name" placeholder="Имя Фамилия">
