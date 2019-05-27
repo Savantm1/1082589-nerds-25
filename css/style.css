@@ -138,7 +138,7 @@ a {
   font-size: 18px;
 
 }
-.show {
+.btn-show {
   display: block;
   width: 260px;
   height: 50px;
@@ -156,11 +156,11 @@ a {
   border-radius: 3px;
 }
 
-.show:hover {
+.btn-show:hover {
   background-color:#dfdfdf;
 }
 
-.show:active {
+.btn-show:active {
 color: #a6a6a6;
 
   background-color: #d5d5d5;
