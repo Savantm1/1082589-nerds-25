@@ -6,7 +6,34 @@ body {
   line-height: 24px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding:0;
+  clip:rect(0000);
+  overflow: hidden;
+}
+
 .main-header {
+  background-color: #eeeeee;
+}
+
+.container {
+  width:1160px;
+  margin: 0 auto;
+  padding:0 20px;
+}
+.main-navigation {
+
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  align-items: center;
+
+
   text-transform: uppercase;
   font-weight: 700;
   line-height: 30px;
@@ -14,8 +41,16 @@ body {
   background-color: #eeeeee;
 }
 
-ul {
+.main-menu {
+  display: flex;
+  flex-basis: 440px;
+  justify-content: space-between;
+}
+
+.service-item, .task-list, .user-navigation, .main-menu, .social, .partners-list, .content {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -35,12 +70,38 @@ a {
   border-bottom: 2px solid #fb565a;
 }
 
+.services {
+  padding-left: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 300px;
+}
+
 .service-item h3 {
   font-size: 24px;
   text-transform: uppercase;
   line-height: 30px;
+  margin-bottom: 0;
 }
 
+.service-item img {
+  order: -1;
+}
+.service-item p {
+  margin-top:30px;
+  margin-bottom: 40px;
+
+}
+.service-item a {
+  width: 160px;
+
+}
 .btn {
   padding: 20px 40px;
 
@@ -49,6 +110,7 @@ a {
   text-transform: uppercase;
   line-height: 18px;
   font-size: 16px;
+  text-align: center;
 
   background-color: #fb565a;
   border-radius: 3px;
@@ -169,5 +231,66 @@ color: #a6a6a6;
 
 .content-item p {
   color:#666666;
+}
+
+/*стили для футера*/
+.footer-bottom {
+  display: flex;
+  min-height: 220px;
+  align-items: center;
+}
+
+.social {
+  display:flex;
+  margin-right:140px;
+}
+
+.offer {
+  margin-right: auto;
+}
+
+
+/*стили для каталога*/
+.main-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  padding-bottom: 116px;
+  padding-top:90px;
+  margin:0;
+  width: 100vw;
+
+  text-align: center;
+
+  background-color: #eeeeee;
+}
+
+.filters {
+  width: 260px;
+}
+
+.filter-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.content {
+  width:760px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.content-item {
+  width: 360px;
+  height: 615px;
+
+}
+
+.window-hidden {
+  display: none;
 }
 
