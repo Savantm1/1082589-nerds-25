@@ -12,8 +12,8 @@ body {
   height: 1px;
   margin: -1px;
   border: 0;
-  padding:0;
-  clip:rect(0000);
+  padding: 0;
+  clip: rect(0000);
   overflow: hidden;
 }
 
@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  width:1160px;
+  width: 1160px;
   margin: 0 auto;
   padding:0 20px;
 }
@@ -47,7 +47,7 @@ body {
   justify-content: space-between;
 }
 
-.service-item, .task-list, .user-navigation, .main-menu, .social, .partners-list, .content {
+.design-list-none {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -71,16 +71,17 @@ a {
 }
 
 .services {
-  padding-left: 0px;
+  padding-left: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+
 }
 
 .service-item {
   display: flex;
   flex-direction: column;
   flex-basis: 300px;
+  margin-top: 80px;
+  margin-right: 100px;
 }
 
 .service-item h3 {
@@ -94,8 +95,7 @@ a {
   order: -1;
 }
 .service-item p {
-  margin-top:30px;
-  margin-bottom: 40px;
+  margin: 30px 0;
 
 }
 .service-item a {
@@ -156,7 +156,7 @@ a {
 }
 
 .offer b {
-  font-size:36px;
+  font-size: 36px;
   line-height: 36px;
   font-weight: 700;
 }
@@ -170,7 +170,7 @@ a {
   width: 200px;
   height: 50px;
   box-sizing: border-box;
-  padding:16px 0px;
+  padding: 16px 0;
 
   font-weight: 500;
   color: #ffffff;
@@ -205,7 +205,7 @@ a {
   width: 260px;
   height: 50px;
   box-sizing: border-box;
-  padding:16px 0px;
+  padding: 16px 0px;
 
   font-weight: 500;
   text-transform: uppercase;
@@ -214,12 +214,12 @@ a {
   text-align: center;
 
   background-color: #eeeeee;
-  border:none;
+  border: none;
   border-radius: 3px;
 }
 
 .btn-show:hover {
-  background-color:#dfdfdf;
+  background-color: #dfdfdf;
 }
 
 .btn-show:active {
@@ -230,7 +230,7 @@ color: #a6a6a6;
 }
 
 .content-item p {
-  color:#666666;
+  color: #666666;
 }
 
 /*стили для футера*/
@@ -241,8 +241,8 @@ color: #a6a6a6;
 }
 
 .social {
-  display:flex;
-  margin-right:140px;
+  display: flex;
+  margin-right: 140px;
 }
 
 .offer {
@@ -258,9 +258,8 @@ color: #a6a6a6;
 
 .title {
   padding-bottom: 116px;
-  padding-top:90px;
-  margin:0;
-  width: 100vw;
+  padding-top: 90px;
+  margin: 0;
 
   text-align: center;
 
@@ -272,13 +271,17 @@ color: #a6a6a6;
 }
 
 .filter-block {
-  display: flex;
-  flex-direction: column;
+  border:none;
   margin-bottom: 50px;
+  padding:0;
+}
+
+.filter-block label {
+  display: block;
 }
 
 .content {
-  width:760px;
+  width: 760px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
