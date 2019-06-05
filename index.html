@@ -95,13 +95,19 @@
     <div class="footer-bottom">
       <ul class="social design-list-none">
         <li>
-          <a class="social-button" href="#" >Мы вконтакте</a>
+          <a class="social-button vkontakte" href="#" >
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
         </li>
         <li>
-          <a class="social-button" href="#" >Мы в фейсбуке</a>
+          <a class="social-button facebook" href="#" >
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
         </li>
         <li>
-          <a class="social-button" href="#" >Мы в интстаграм</a>
+          <a class="social-button instagram" href="#" >
+            <span class="visually-hidden">Инстаграмм</span>
+          </a>
         </li>
       </ul>
       <div class="offer">
@@ -112,22 +118,28 @@
   </footer>
   <div class="write-us">
     <h2>Напишите нам</h2>
-    <button type="button" name="close" >Закрыть окно</button>
+    <button type="button" class="btn-close" name="close" >
+      <span class="visually-hidden">Закрыть окно
+      </span>
+  </button>
     <form action="#" method="post">
       <label>
-        Ваше имя
+        <p>Ваше имя:
+        </p>
         <input type="text" name="person-name" placeholder="Имя Фамилия">
       </label>
       <label>
-        Ваш e-mail:
+        <p>Ваш e-mail:
+        </p>
         <input type="mail" name="mail-adress" placeholder="email@example.com">
       </label>
       <label>
-        Текст письма:
+        <p>Текст письма:
+        </p>
         <textarea rows="5" name="mail-text" placeholder="В свободной форме">
         </textarea>
       </label>
-      <button type="submit" name="submit">Отправить</button>
+      <button class="btn" type="submit" name="submit">Отправить</button>
     </form>
   </div>
   </body>
