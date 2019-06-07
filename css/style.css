@@ -38,12 +38,10 @@ img {
   padding:0 20px;
 }
 .main-navigation {
-
   display: flex;
   justify-content: space-between;
   padding-top: 50px;
   align-items: center;
-
 
   text-transform: uppercase;
   font-weight: 700;
@@ -74,7 +72,6 @@ img {
   background-image: url("../img/cart-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-
 }
 
 .design-list-none {
@@ -103,14 +100,21 @@ a {
 .services {
   padding-left: 0;
   display: flex;
+  flex-wrap: wrap;
   margin-top: 80px;
 }
 
 .service-item {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 300px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 300px;
+  margin-bottom: 20px;
   margin-right: 100px;
+  min-height: 400px;
+}
+
+.service-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .service-item h3 {
@@ -123,15 +127,19 @@ a {
 .service-item img {
   order: -1;
 }
+
 .service-item p {
-  margin: 30px 0;
-
+  margin-bottom: 30px;
 }
+
 .service-item a {
+  display: block;
+  box-sizing: border-box;
   width: 160px;
-
 }
+
 .btn {
+  margin-top: 30px;
   padding: 20px 40px;
 
   font-weight: 500;
@@ -309,18 +317,18 @@ color: #a6a6a6;
 }
 
 .social .instagram::before {
-
   top: 30px;
   left: 30px;
 
   background-image: url("../img/insta-icon.svg");
 }
+
 .social-button:hover {
- background-color:#e74246;
+  background-color:#e74246;
 }
 
 .social-button:active {
- background-color:#d7373b;
+  background-color:#d7373b;
 }
 
 .social-button:active::before {
@@ -399,19 +407,21 @@ color: #a6a6a6;
   position: absolute;
   z-index: 1;
   bottom: 0;
+  text-align: center;
 
   box-sizing: border-box;
   width: 360px;
-  height: 230px;
+  padding-bottom: 40px;
   padding-top: 30px;
 
   background-color: #eeeeee;
 }
 
 .block-title {
-  display: block;
-  text-align: center;
-  margin-bottom: 22px;
+  display: inline-block;
+}
+.window-hidden p {
+  margin-top: 22px;
 }
 
 .block-title:hover {
@@ -431,32 +441,32 @@ color: #a6a6a6;
 }
 
 .content-item::before {
-content: "";
-position: absolute;
-top: 0;
+  content: "";
+  position: absolute;
+  top: 0;
 
-width: 360px;
-height: 40px;
+  width: 360px;
+  height: 40px;
 
-background-image: url("../img/browser.svg");
-background-repeat: no-repeat;
-background-color: #ffffff;
-opacity: 0.12;
+  background-image: url("../img/browser.svg");
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  opacity: 0.12;
 }
 /*окно обратной связи */
 
 .write-us {
   position: fixed;
   box-sizing: border-box;
-  z-index: 2;
+  z-index: 5;
 
   left: 50%;
-  bottom: 100px;
+  bottom: 50%;
 
   width: 960px;
   height: 590px;
   padding: 78px 100px 86px;
-  transform: translateX(-50%);
+  transform: translate(-50%, 50%);
 
   box-shadow: 0 20px 20px 5px #5e5f5f;
   background-color: #ffffff;
