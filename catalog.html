@@ -57,64 +57,46 @@
               </div>
             </fieldset>
             <fieldset class="filter-block">
-              <legend class="block-title">Сетка:</legend>
-              <label>
-                <input type="radio" name="grid" value="adaptive" checked>
-                Адаптивная
-              </label>
-              <label>
-                <input type="radio" name="grid" value="fixed">
-                Фиксированная
-              </label>
-              <label>
-                <input type="radio" name="grid" value="rubber">
-                Резиновая
-              </label>
+              <legend class="filter-title">Сетка:</legend>
+                <input class="visually-hidden filter-input-radio"  id="adaptive" type="radio" name="grid" value="adaptive" checked>
+                <label for="adaptive">Адаптивная</label>
+                <input class="visually-hidden filter-input-radio" id="fixed" type="radio" name="grid" value="fixed">
+                <label for="fixed">Фиксированная</label>
+                <input class="visually-hidden filter-input-radio" id="rubber" type="radio" name="grid" value="rubber">
+                <label for="rubber">Резиновая</label>
             </fieldset>
             <fieldset class="filter-block">
-              <legend class="block-title">Особенности:</legend>
-              <label>
-                <input type="checkbox" name="slider" value="slider"checked>
-                Слайдер
-              </label>
-              <label>
-                <input type="checkbox" name="block-of-feautures" value="block-of-feautures">
-                Блок преимуществ
-              </label>
-              <label>
-                <input type="checkbox" name="news" value="news" checked>
-                Новости
-              </label>
-              <label>
-                <input type="checkbox" name="gallery" value="gallery">
-                Галерея
-              </label>
-              <label>
-                <input type="checkbox" name="basket" input="basket">
-                Корзина
-              </label>
+              <legend class="filter-title">Особенности:</legend>
+                <input class="visually-hidden filter-input-checkbox" id="slider" type="checkbox" name="slider" value="slider"checked>
+                <label for="slider">Слайдер</label>
+                <input class="visually-hidden filter-input-checkbox" id="block-of-features" type="checkbox" name="block-of-feautures" value="block-of-feautures">
+                <label for="block-of-features">Блок преимуществ</label>
+                <input class="visually-hidden filter-input-checkbox" id="news" type="checkbox" name="news" value="news" checked>
+                <label for="news">Новости</label>
+                <input class="visually-hidden filter-input-checkbox" id="gallery" type="checkbox" name="gallery" value="gallery">
+                <label for="gallery">Галерея</label>
+                <input class="visually-hidden filter-input-checkbox" id="basket" type="checkbox" name="basket" input="basket">
+                <label for="basket">Корзина</label>
             </fieldset>
             <button class="btn-show" type="submit">Показать</button>
           </form>
         </aside>
-          <form class="sort" method="get" action="#">
-            <fieldset>
-              <legend>Сортировать:</legend>
-              <ul class="sort-list">
-                <li>
-                  <a class="active" href="#">По цене</a>
-                </li>
-                <li>
-                  <a href="#">По типу</a>
-                </li>
-                <li>
-                  <a href="#">По названию</a>
-                </li>
-                <li class="arrows"></li>
-              </ul>
-            </fieldset>
-          </form>
         <section class="catalog">
+          <ul class="sort-list">
+            <li>
+              <a href="#">Сортитовать:</a>
+            </li>
+            <li class="active">
+              <a href="#">По цене</a>
+            </li>
+            <li>
+              <a href="#">По типу</a>
+            </li>
+            <li>
+              <a href="#">По названию</a>
+            </li>
+            <li class="arrows"><a href="#"></a></li>
+          </ul>
           <h2 class="visually-hidden">Список готовых шаблонов</h2>
           <ul class="content design-list-none">
             <li class="content-item">
@@ -179,17 +161,18 @@
             <li>
               <a class="btn-number" href="#">Следующая</a>
             </li>
-
           </ul>
       </div>
     </main>
     <section class="map">
-      <i class="map-point"></i>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1055.6039633513856!2d30.322158892697452!3d59.93865944273993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1560382316827!5m2!1sru!2sru" width="100%" height="416" frameborder="0" style="border:0" allowfullscreen>
+      </iframe>
+<!--       <i class="map-point"></i> -->
       <div class="contacts">
         <b>Nёrds design studio</b>
         <p> 1991186, Санкт-Петербург,ул. Б. Конюшенная, д. 19/8</p>
         <p>тел. +7 (812) 275-75-75</p>
-        <a class="btn" href="#">Напишите нам</a>
+        <a class="btn modal-link" href="#">Напишите нам</a>
       </div>
     </section>
     <footer class="main-footer container">
@@ -217,7 +200,7 @@
         </div>
       </div>
     </footer>
-<!--     <div class="write-us">
+    <div class="write-us">
       <h2>Напишите нам</h2>
       <button type="button" class="btn-close" name="close" >
         <span class="visually-hidden">Закрыть окно</span>
@@ -238,6 +221,72 @@
         </label>
         <button class="btn" type="submit" name="submit">Отправить</button>
       </form>
-    </div> -->
+    </div>
+    <script type="text/javascript">
+
+      var link = document.querySelector(".modal-link");
+      var modal = document.querySelector(".write-us");
+      var close = document.querySelector(".btn-close");
+      var login = document.querySelector("[name=person-name]");
+      var form = document.querySelector("form");
+      var mail = document.querySelector("[name=mail-adress]");
+      var isStorageSupport = true;
+      var storage = "";
+
+        try {
+          storage = localStorage.getItem("login");
+        } catch (err) {
+          isStorageSupport = false;
+        };
+
+        try {
+          storage = localStorage.getItem("mail");
+        } catch (err) {
+          isStorageSupport = false;
+        };
+
+      link.addEventListener("click",function(evt){
+        evt.preventDefault();
+        modal.classList.add("modal-show");
+
+        if (storage) {
+        login.value = storage;
+        mail.focus();
+        } else {
+        login.focus();
+        };
+      });
+
+      close.addEventListener("click", function(evt){
+        evt.preventDefault();
+        modal.classList.remove("modal-show");
+        modal.classList.remove("modal-error");
+      });
+
+      form.addEventListener("submit", function (evt) {
+        if (!login.value || !mail.value) {
+          evt.preventDefault();
+          modal.classList.remove("modal-error");
+          modal.offsetWidth = modal.offsetWidth;
+          modal.classList.add("modal-error");
+          console.log("Нужно ввести логин и пароль");
+        } else {
+            if(isStorageSupport){
+              localStorage.setItem("login", login.value);
+              localStorage.setItem("mail", mail.value);
+            };
+          };
+      });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (modal.classList.contains("modal-show")) {
+            modal.classList.remove("modal-show");
+            modal.classList.remove("modal-error");
+          }
+        }
+  });
+    </script>
   </body>
 </html>

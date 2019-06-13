@@ -86,48 +86,68 @@
         </li>
       </ul>
       <section class="features">
-        <b>Мы - маленькая, но гордая дизайн-студия из Краснодара.</b>
-        <p>Исповедуем принципы минимализма и чистоты.
-        Ставим математическиий расчет превыше креатива.
-        Работаем не покладая рук, как роботы.
-        </p>
-        <span>Выполняем заказы на разработку:</span>
-        <ul class="task-list design-list-none">
-          <li class="task-list-item">Веб-сайтов любой сложности</li>
-          <li class="task-list-item">Мобильных приложений для iOS и Android </li>
-          <li class="task-list-item">Слайдшоу и видео для корпоративных презентаций</li>
-        </ul>
+        <div class="features-description">
+          <b>Мы - маленькая, но гордая дизайн-студия из Краснодара.</b>
+          <p>Исповедуем принципы минимализма и чистоты.
+          Ставим математическиий расчет превыше креатива.
+          Работаем не покладая рук, как роботы.
+          </p>
+          <span>Выполняем заказы на разработку:</span>
+          <ul class="task-list design-list-none">
+            <li class="task-list-item">Веб-сайтов любой сложности</li>
+            <li class="task-list-item">Мобильных приложений для iOS и Android </li>
+            <li class="task-list-item">Слайдшоу и видео для корпоративных презентаций</li>
+          </ul>
+        </div>
+        <div class="features-block">
+          <img src="img/nerds-illustration.png" alt="Nerds">
+          <b>с 2004 года любим точность во всем:</b>
+          <div class="features-block-item">
+            <p>146<sup class="percent">%</sup></p>
+            <p>Уровень самоотдачи</p>
+          </div>
+          <div class="features-block-item">
+            <p>100<sup class="percent">%</sup></p>
+            <p>Соблюдение сроков</p>
+          </div>
+          <div class="features-block-item">
+            <p>50<sup class="percent">%</sup></p>
+            <p>Минимальная предоплата</p>
+          </div>
+        </div>
       </section>
       <ul class="partners-list design-list-none">
         <li class="list-item">
-          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="" alt="HTML academy"></a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-1.jpg" alt="HTML academy"></a>
         </li>
         <li class="list-item">
           <a href="#">
-            <img src="" alt="Barbershop Borodinski">
+            <img src="img/logo-2.jpg" alt="Barbershop Borodinski">
           </a>
         </li>
         <li class="list-item">
           <a href="#">
-            <img src="" alt="Pink">
+            <img src="img/logo-3.jpg" alt="Pink">
           </a>
         </li>
         <li class="list-item">
           <a href="#">
-            <img src="" alt="Mishka">
+            <img src="img/logo-4.png" alt="Mishka">
           </a>
         </li>
       </ul>
     </main>
     <section class="map">
-      <i class="map-point"></i>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1055.6039633513856!2d30.322158892697452!3d59.93865944273993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1560382316827!5m2!1sru!2sru" width="100%" height="416" frameborder="0" style="border:0" allowfullscreen>
+      </iframe>
+<!--       <i class="map-point"></i> -->
       <div class="contacts">
         <b>Nёrds design studio</b>
         <p> 1991186, Санкт-Петербург,
         ул. Б. Конюшенная, д. 19/8
         </p>
         <p>тел. +7 (812) 275-75-75</p>
-        <a class="btn" href="#">Напишите нам</a>
+        <a class="btn modal-link" href="#">Напишите нам</a>
       </div>
     </section>
   <footer class="main-footer container">
@@ -155,7 +175,7 @@
       </div>
     </div>
   </footer>
-<!--   <div class="write-us">
+  <div class="write-us">
     <h2>Напишите нам</h2>
     <button type="button" class="btn-close" name="close" >
       <span class="visually-hidden">Закрыть окно</span>
@@ -176,6 +196,72 @@
       </label>
       <button class="btn" type="submit" name="submit">Отправить</button>
     </form>
-  </div> -->
+  </div>
+  <script type="text/javascript">
+
+      var link = document.querySelector(".modal-link");
+      var modal = document.querySelector(".write-us");
+      var close = document.querySelector(".btn-close");
+      var login = document.querySelector("[name=person-name]");
+      var form = document.querySelector("form");
+      var mail = document.querySelector("[name=mail-adress]");
+      var isStorageSupport = true;
+      var storage = "";
+
+        try {
+          storage = localStorage.getItem("login");
+        } catch (err) {
+          isStorageSupport = false;
+        };
+
+        try {
+          storage = localStorage.getItem("mail");
+        } catch (err) {
+          isStorageSupport = false;
+        };
+
+      link.addEventListener("click",function(evt){
+        evt.preventDefault();
+        modal.classList.add("modal-show");
+
+        if (storage) {
+        login.value = storage;
+        login.focus();
+        } else {
+        mail.focus();
+        };
+      });
+
+      close.addEventListener("click", function(evt){
+        evt.preventDefault();
+        modal.classList.remove("modal-show");
+        modal.classList.remove("modal-error");
+      });
+
+      form.addEventListener("submit", function (evt) {
+        if (!login.value || !mail.value) {
+          evt.preventDefault();
+          modal.classList.remove("modal-error");
+          modal.offsetWidth = modal.offsetWidth;
+          modal.classList.add("modal-error");
+          console.log("Нужно ввести логин и пароль");
+        } else {
+            if(isStorageSupport){
+              localStorage.setItem("login", login.value);
+              localStorage.setItem("mail", mail.value);
+            };
+          };
+      });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (modal.classList.contains("modal-show")) {
+            modal.classList.remove("modal-show");
+            modal.classList.remove("modal-error");
+          }
+        }
+  });
+    </script>
   </body>
 </html>
