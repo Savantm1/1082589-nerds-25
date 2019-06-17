@@ -670,7 +670,7 @@ a {
   cursor: pointer;
 }
 
-.arrows::before  {
+.arrows::before {
   content: '';
 
   position: absolute;
@@ -1239,6 +1239,9 @@ a {
   font-weight: 700;
 }
 
+.write-us label:nth-child(3) {
+  margin-top: 35px;
+}
 .write-us p {
   margin-bottom: 12px;
 }
