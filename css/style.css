@@ -1167,6 +1167,11 @@ a {
   background-size: 100%;
 }
 
+.google-maps {
+  width: 100%;
+  height: 416px;
+  border: none;
+}
 .contacts {
   position: absolute;
   left: 180px;
@@ -1433,3 +1438,4 @@ a {
 .write-us input:focus {
   border-color: #000000;
 }
+
